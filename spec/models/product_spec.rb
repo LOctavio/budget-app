@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   let(:author) { User.create(id: 1, name: 'Luis', email: 'luis@gmail.com', password: 'luis123') }
-  before { 
+  before do
     @product = author.products.create(name: 'rice', amount: 20)
     @group = author.groups.new(name: 'food', icon: 'icon')
     @product.groups << @group
-  }
+  end
   subject { @product }
 
   it 'Name must not be blank' do

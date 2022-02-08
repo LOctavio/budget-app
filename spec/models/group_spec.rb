@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   let(:author) { User.create(id: 1, name: 'Luis', email: 'luis@gmail.com', password: 'luis123') }
-  before { 
+  before do
     @group = author.groups.new(name: 'food', icon: 'icon')
-  }
+  end
   subject { @group }
 
   it 'Name must not be blank' do

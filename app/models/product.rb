@@ -4,5 +4,5 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :amount, comparison: { greater_than: 0 }
-  validates :groups, :length => { :minimum => 1 }
+  validates :groups, length: { minimum: 1 }
 end
