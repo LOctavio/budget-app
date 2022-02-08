@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .main-container {
   background-color: #f0f2f1;
 }
@@ -48,4 +53,42 @@
 
 .splash-buttons > * > .signup {
   color: #3778c2;
+}
+
+.authentication-navbar {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+  height: 40px;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.authentication-navbar > .actions > .signup {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.authentication-navbar > .title {
+  text-transform: uppercase;
+}
+
+.authentication-fields {
+  width: 100%;
+  border: none;
+  height: 40px;
+  border-bottom: #f0f2f1 1px solid;
+  border-top: #f0f2f1 1px solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.sessions-links {
+  text-align: center;
+  margin-top: 30px;
+  color: #979797;
 }
