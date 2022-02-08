@@ -55,24 +55,24 @@ a {
   color: #3778c2;
 }
 
-.authentication-navbar {
+.navbar {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
   background-color: #3778c2;
-  height: 40px;
+  height: 50px;
   align-items: center;
   color: white;
   margin-bottom: 20px;
 }
 
-.authentication-navbar > .actions > .signup {
+.navbar > .actions > .signup {
   background-color: transparent;
   border: none;
   color: inherit;
 }
 
-.authentication-navbar > .title {
+.navbar > .title {
   text-transform: uppercase;
 }
 
