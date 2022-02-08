@@ -4,9 +4,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  # authenticated :user do
-  #   root to: "home#index"
-  # end
+  
+  authenticated :user do
+    root to: "groups#index", as: :authenticated_root
+  end
   
   unauthenticated :user do
     root "splash#index"
