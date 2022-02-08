@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_07_201729) do
+ActiveRecord::Schema.define(version: 2022_02_08_003528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 2022_02_07_201729) do
     t.index ["author_id"], name: "index_groups_on_author_id"
   end
 
+  create_table "groups_products", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "group_id", null: false
+    t.index ["group_id"], name: "index_groups_products_on_group_id"
+    t.index ["product_id"], name: "index_groups_products_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.float "amount"
@@ -31,13 +38,6 @@ ActiveRecord::Schema.define(version: 2022_02_07_201729) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "author_id", null: false
     t.index ["author_id"], name: "index_products_on_author_id"
-  end
-
-  create_table "products_groups", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.bigint "group_id", null: false
-    t.index ["group_id"], name: "index_products_groups_on_group_id"
-    t.index ["product_id"], name: "index_products_groups_on_product_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_201729) do
   end
 
   add_foreign_key "groups", "users", column: "author_id"
+  add_foreign_key "groups_products", "groups"
+  add_foreign_key "groups_products", "products"
   add_foreign_key "products", "users", column: "author_id"
-  add_foreign_key "products_groups", "groups"
-  add_foreign_key "products_groups", "products"
 end
