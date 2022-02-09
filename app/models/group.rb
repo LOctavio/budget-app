@@ -3,7 +3,7 @@ class Group < ApplicationRecord
   has_and_belongs_to_many :products
   has_one_attached :icon, :dependent => :destroy
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :icon, presence: true
 
   def total_amount
