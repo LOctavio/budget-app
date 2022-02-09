@@ -21,6 +21,8 @@ a {
 
 .main-container {
   background-color: #f0f2f1;
+  margin: 0;
+  padding-bottom: 60px;
 }
 
 .splash-title {
@@ -55,28 +57,28 @@ a {
   color: #3778c2;
 }
 
-.authentication-navbar {
+.navbar {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
   background-color: #3778c2;
-  height: 40px;
+  height: 50px;
   align-items: center;
   color: white;
   margin-bottom: 20px;
 }
 
-.authentication-navbar > .actions > .signup {
+.navbar > .actions > .signup {
   background-color: transparent;
   border: none;
   color: inherit;
 }
 
-.authentication-navbar > .title {
+.navbar > .title {
   text-transform: uppercase;
 }
 
-.authentication-fields {
+.fields {
   width: 100%;
   border: none;
   height: 40px;
@@ -91,4 +93,29 @@ a {
   text-align: center;
   margin-top: 30px;
   color: #979797;
+}
+
+.group-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin: 15px;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.add-new-button {
+  width: 100vw;
+  height: 60px;
+  border: none;
+  background-color: #5fb523;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.group-icon {
+  width: 120px;
+  display: block;
 }

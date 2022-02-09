@@ -1,5 +1,5 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <navbar class="authentication-navbar">
+  <navbar class="navbar">
     <%= link_to root_path do %>
       <i class="fa-solid fa-arrow-left"></i>
     <% end %>
@@ -9,11 +9,11 @@
     </div>
   </navbar>
   <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'authentication-fields' %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'fields' %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'authentication-fields' %>
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'fields' %>
   </div>
 <% end %>
 
