@@ -1,0 +1,12 @@
+<navbar class="navbar">
+  <%= link_to root_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+  <span>NEW CATEGORY</span>
+  <i class="fa-solid fa-magnifying-glass"></i>
+</navbar>
+<%= form_with model: @group do |f| %>
+  <%= f.text_field :name, placeholder: 'Title', class: 'fields' %>
+  <%= f.file_field :icon %>
+  <%= f.submit 'Create', class: 'add-new-button' %>
+<% end %>
