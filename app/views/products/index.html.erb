@@ -1,0 +1,18 @@
+<navbar class="navbar">
+  <%= link_to root_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+  <span>PRODUCTS</span>
+  <i class="fa-solid fa-magnifying-glass"></i>
+</navbar>
+<div class="products-total">
+  <span>Total</span>
+  <span>$<%= @group.total_amount %></span>
+</div>
+<% @products.each do |product| %>
+  <div class="card"> 
+    <span><%= product.name %></span>
+    <span>$<%= product.amount %></span>
+  </div>
+<% end %>
+<%= button_to 'Add a new product', new_group_product_path, method: :get, class: "add-new-button" %>

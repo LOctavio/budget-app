@@ -5,7 +5,7 @@
 </navbar>
 <% @groups.each do |group| %>
   <%= link_to group_products_path(group) do %>
-    <div class="group-card"> 
+    <div class="card"> 
       <% if group.icon.attached? %>
         <%= image_tag group.icon, class: 'group-icon' %> 
       <% else %>

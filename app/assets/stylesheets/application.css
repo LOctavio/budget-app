@@ -95,7 +95,7 @@ a {
   color: #979797;
 }
 
-.group-card {
+.card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,9 +113,29 @@ a {
   position: fixed;
   bottom: 0;
   left: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
 }
 
 .group-icon {
-  width: 120px;
+  width: 100px;
   display: block;
+}
+
+.products-total {
+  display: flex;
+  background-color: white;
+  margin-top: -20px;
+  height: 20px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
