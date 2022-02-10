@@ -5,8 +5,9 @@ RSpec.describe 'Categories', type: :system do
     before(:each) do
       author = User.create(name: 'Luis', email: 'luis@gmail.com', password: '123456')
       author.groups.create(
-      name: 'Food',
-      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg'))
+        name: 'Food',
+        icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg')
+      )
       visit new_user_session_path
       fill_in 'Email', with: 'luis@gmail.com'
       fill_in 'Password', with: '123456'

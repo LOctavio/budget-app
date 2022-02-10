@@ -6,7 +6,8 @@ RSpec.describe Product, type: :model do
     @product = author.products.create(name: 'rice', amount: 20)
     @group = author.groups.new(
       name: 'food',
-      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg'))
+      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg')
+    )
     @product.groups << @group
   end
   subject { @product }

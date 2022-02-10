@@ -5,8 +5,9 @@ RSpec.describe 'Products', type: :system do
     before(:each) do
       author = User.create(name: 'Luis', email: 'luis@gmail.com', password: '123456')
       @group = author.groups.create(
-      name: 'Food',
-      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg'))
+        name: 'Food',
+        icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg')
+      )
       product = author.products.new(name: 'rice', amount: 20)
       product.groups << @group
       product.save

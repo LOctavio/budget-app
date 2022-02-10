@@ -5,7 +5,8 @@ RSpec.describe Group, type: :model do
   before do
     @group = author.groups.new(
       name: 'food',
-      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg'))
+      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg')
+    )
   end
   subject { @group }
 
