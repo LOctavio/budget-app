@@ -4,7 +4,10 @@ RSpec.describe Product, type: :model do
   let(:author) { User.create(id: 1, name: 'Luis', email: 'luis@gmail.com', password: 'luis123') }
   before do
     @product = author.products.create(name: 'rice', amount: 20)
-    @group = author.groups.new(name: 'food', icon: 'icon')
+    @group = author.groups.new(
+      name: 'food',
+      icon: Rack::Test::UploadedFile.new('spec/support/no_image_icon.svg', 'no_image_icon.svg')
+    )
     @product.groups << @group
   end
   subject { @product }

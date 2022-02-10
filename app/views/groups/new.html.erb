@@ -6,7 +6,7 @@
   <i class="fa-solid fa-magnifying-glass"></i>
 </navbar>
 <%= form_with model: @group do |f| %>
-  <%= f.text_field :name, placeholder: 'Title', class: 'fields' %>
+  <%= f.text_field :name, placeholder: 'Name', class: 'fields' %>
   <%= f.file_field :icon %>
-  <%= f.submit 'Save', class: 'add-new-button' %>
+  <%= f.submit 'save', class: 'add-new-button' %>
 <% end %>
