@@ -1,0 +1,19 @@
+<navbar class="navbar">
+  <i class="fa-solid fa-bars"></i>
+  <span>CATEGORIES</span>
+  <i class="fa-solid fa-magnifying-glass"></i>
+</navbar>
+<% @groups.each do |group| %>
+  <%= link_to group_products_path(group) do %>
+    <div class="card"> 
+      <% if group.icon.attached? %>
+        <%= image_tag group.icon, class: 'group-icon' %> 
+      <% else %>
+        <%= image_tag("no_image_icon.svg", class: 'group-icon') %> 
+      <% end %>
+      <span><%= group.name %></span>
+      <span>$<%= group.total_amount %></span>
+    </div>
+  <% end %>
+<% end %>
+<%= button_to 'add a new category', new_group_path, method: :get, class: "add-new-button" %>
