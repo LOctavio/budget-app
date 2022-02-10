@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
       flash[:alert] = 'Your product was created successfully'
     else
       redirect_back(fallback_location: root_path)
-      flash[:alert] = 'Your category was not created'
+      flash[:alert] = 'Your product was not created'
     end
   end
 
