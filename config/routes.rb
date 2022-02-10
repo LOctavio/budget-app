@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   
-  resources :groups do
-    resources :products
+  resources :groups, only: [:new, :create] do
+    resources :products, only: [:index, :new, :create]
   end
   devise_scope :user do
     get 'signout', to: 'users/sessions#destroy'
